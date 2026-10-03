@@ -70,6 +70,8 @@ section{padding-block:clamp(60px,8vw,110px)}
 .nav>a.signin{margin-left:6px;font:400 13px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--plum)}
 .nav>a.signin:hover{color:var(--copper)}
 .mnav{display:none}
+.nav>a,.nav .dd>button{white-space:nowrap}
+@media (max-width:1140px){.nav{display:none}.mnav{display:block}}
 .mnav summary{list-style:none;cursor:pointer;font:400 13px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;padding:12px 14px;border:1px solid var(--plum);color:var(--plum)}
 .mnav summary::-webkit-details-marker{display:none}
 .mnav[open] .panel{display:flex}
