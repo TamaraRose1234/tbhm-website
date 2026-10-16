@@ -370,3 +370,4 @@ button.vthumb{padding:0;cursor:pointer;background:none;width:100%;aspect-ratio:1
 @media (max-width:820px){.hero.photo-first .frame{order:-1}}
 .voices.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:820px){.voices.two{grid-template-columns:1fr}}
+.steps.plain .step{grid-template-columns:1fr!important}
