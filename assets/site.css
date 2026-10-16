@@ -365,3 +365,8 @@ button.vthumb{padding:0;cursor:pointer;background:none;width:100%;aspect-ratio:1
 .vfeature{margin:0 0 clamp(22px,3vw,40px);max-width:880px}
 .vfeature video{width:100%;height:auto;aspect-ratio:16/9;display:block;border:1px solid rgba(196,166,95,.6);box-shadow:none}
 .vfeature figcaption{margin-top:12px;font:400 20px/1.4 var(--display);color:var(--shell)}
+
+/* Home: photo above the words on phones (Tamara, 2026-10-15) */
+@media (max-width:820px){.hero.photo-first .frame{order:-1}}
+.voices.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:820px){.voices.two{grid-template-columns:1fr}}
