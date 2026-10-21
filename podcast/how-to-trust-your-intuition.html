@@ -24,9 +24,18 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "PodcastEpisode", "name": "How to Trust Your Intuition and Stop Second-Guessing Yourself", "episodeNumber": 12, "datePublished": "2025-04-29", "timeRequired": "PT71M", "partOfSeries": {"@type": "PodcastSeries", "name": "The Next Evolution with Tamara Rose"}, "url": "https://www.thebeyondhumanmethod.com/podcast/how-to-trust-your-intuition", "associatedMedia": {"@type": "VideoObject", "name": "How to Trust Your Intuition and Stop Second-Guessing Yourself", "embedUrl": "https://www.youtube.com/embed/6HDnuAMUrgk", "thumbnailUrl": "https://i.ytimg.com/vi/6HDnuAMUrgk/maxresdefault.jpg", "uploadDate": "2025-04-29"}}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TN50F5PK7E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TN50F5PK7E');
+(function(){var K='tbhm_utm',u=null,q=new URLSearchParams(location.search);
+try{u=JSON.parse(localStorage.getItem(K)||'null');}catch(x){}
+if(q.get('utm_source')){u={s:q.get('utm_source'),m:q.get('utm_medium')||'',c:q.get('utm_campaign')||''};}
+else if(!u&&document.referrer&&document.referrer.indexOf(location.hostname)<0){try{u={s:new URL(document.referrer).hostname.replace(/^www\./,''),m:'referral',c:''};}catch(x){}}
+try{if(u)localStorage.setItem(K,JSON.stringify(u));}catch(x){}
+function tag(a){if(!u||a.href.indexOf('utm_source=')>-1)return;try{var l=new URL(a.href);l.searchParams.set('utm_source',u.s);if(u.m)l.searchParams.set('utm_medium',u.m);if(u.c)l.searchParams.set('utm_campaign',u.c);a.href=l.toString();}catch(x){}}
 document.addEventListener('click',function(e){var a=e.target.closest('a[href]');if(!a)return;var h=a.href;
-if(h.indexOf('calendly.com')>-1)gtag('event','begin_checkout',{link_url:h,link_text:a.textContent.trim()});
-else if(h.indexOf('circle.so')>-1)gtag('event','join_community_click',{link_url:h});});</script>
+if(h.indexOf('calendly.com')>-1){tag(a);gtag('event','begin_checkout',{link_url:h,link_text:a.textContent.trim()});}
+else if(h.indexOf('circle.so')>-1){tag(a);gtag('event',h.indexOf('/checkout/')>-1?'add_to_cart':'join_community_click',{link_url:h});}});
+document.addEventListener('submit',function(e){var f=e.target;if(f.action&&f.action.indexOf('list-manage')>-1)gtag('event','generate_lead',{form:'rose_report'});});
+window.addEventListener('message',function(e){if(String(e.origin).indexOf('tally.so')<0)return;var d=e.data;try{if(typeof d==='string')d=JSON.parse(d);}catch(x){return;}
+if(d&&d.event==='Tally.FormSubmitted'){gtag('event','quiz_complete',{form_id:(d.payload&&d.payload.formId)||''});gtag('event','generate_lead',{form:'archetype_quiz'});}});})();</script>
 </head>
 <body>
 <a href="#main" class="fine" style="position:absolute;left:-9999px">Skip to content</a>

@@ -24,9 +24,18 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "The Benefits of Making Your Bed Every Morning", "author": {"@type": "Person", "name": "Tamara Rose", "url": "https://www.thebeyondhumanmethod.com/tamara", "jobTitle": "Founder, The Beyond Human Method"}, "publisher": {"@type": "Organization", "name": "The Beyond Human Method"}, "datePublished": "2023-11-23", "dateModified": "2026-10-10", "image": "https://www.thebeyondhumanmethod.com/img/blog/making-your-bed-every-morning.jpg", "mainEntityOfPage": "https://www.thebeyondhumanmethod.com/blog/making-your-bed-every-morning"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is making your bed every morning actually good for you?", "acceptedAnswer": {"@type": "Answer", "text": "For most people, yes. It gives you an early sense of accomplishment, makes your room feel calmer, and gives you an inviting bed to climb into at night."}}, {"@type": "Question", "name": "Does making your bed help with stress?", "acceptedAnswer": {"@type": "Answer", "text": "It can. Research has linked a cluttered home with a less healthy stress hormone pattern in women, and a made bed changes the feel of your whole bedroom in about two minutes."}}, {"@type": "Question", "name": "What should I do after making my bed?", "acceptedAnswer": {"@type": "Answer", "text": "Attach another small habit to it, like a short stretch, a glass of water or a few minutes of journaling, so your routine builds on something you already do."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thebeyondhumanmethod.com/"}, {"@type": "ListItem", "position": 2, "name": "Answers", "item": "https://www.thebeyondhumanmethod.com/answers"}, {"@type": "ListItem", "position": 3, "name": "Benefits of Making Your Bed", "item": "https://www.thebeyondhumanmethod.com/blog/making-your-bed-every-morning"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TN50F5PK7E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TN50F5PK7E');
+(function(){var K='tbhm_utm',u=null,q=new URLSearchParams(location.search);
+try{u=JSON.parse(localStorage.getItem(K)||'null');}catch(x){}
+if(q.get('utm_source')){u={s:q.get('utm_source'),m:q.get('utm_medium')||'',c:q.get('utm_campaign')||''};}
+else if(!u&&document.referrer&&document.referrer.indexOf(location.hostname)<0){try{u={s:new URL(document.referrer).hostname.replace(/^www\./,''),m:'referral',c:''};}catch(x){}}
+try{if(u)localStorage.setItem(K,JSON.stringify(u));}catch(x){}
+function tag(a){if(!u||a.href.indexOf('utm_source=')>-1)return;try{var l=new URL(a.href);l.searchParams.set('utm_source',u.s);if(u.m)l.searchParams.set('utm_medium',u.m);if(u.c)l.searchParams.set('utm_campaign',u.c);a.href=l.toString();}catch(x){}}
 document.addEventListener('click',function(e){var a=e.target.closest('a[href]');if(!a)return;var h=a.href;
-if(h.indexOf('calendly.com')>-1)gtag('event','begin_checkout',{link_url:h,link_text:a.textContent.trim()});
-else if(h.indexOf('circle.so')>-1)gtag('event','join_community_click',{link_url:h});});</script>
+if(h.indexOf('calendly.com')>-1){tag(a);gtag('event','begin_checkout',{link_url:h,link_text:a.textContent.trim()});}
+else if(h.indexOf('circle.so')>-1){tag(a);gtag('event',h.indexOf('/checkout/')>-1?'add_to_cart':'join_community_click',{link_url:h});}});
+document.addEventListener('submit',function(e){var f=e.target;if(f.action&&f.action.indexOf('list-manage')>-1)gtag('event','generate_lead',{form:'rose_report'});});
+window.addEventListener('message',function(e){if(String(e.origin).indexOf('tally.so')<0)return;var d=e.data;try{if(typeof d==='string')d=JSON.parse(d);}catch(x){return;}
+if(d&&d.event==='Tally.FormSubmitted'){gtag('event','quiz_complete',{form_id:(d.payload&&d.payload.formId)||''});gtag('event','generate_lead',{form:'archetype_quiz'});}});})();</script>
 </head>
 <body>
 <a href="#main" class="fine" style="position:absolute;left:-9999px">Skip to content</a>

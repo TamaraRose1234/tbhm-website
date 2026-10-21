@@ -24,9 +24,18 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Screens Before Bed: How Your Phone and TV Affect Your Sleep and Wellbeing", "author": {"@type": "Person", "name": "Tamara Rose", "url": "https://www.thebeyondhumanmethod.com/tamara", "jobTitle": "Founder, The Beyond Human Method"}, "publisher": {"@type": "Organization", "name": "The Beyond Human Method"}, "datePublished": "2023-11-02", "dateModified": "2026-10-10", "image": "https://www.thebeyondhumanmethod.com/img/blog/how-screens-effect-sleep.jpg", "mainEntityOfPage": "https://www.thebeyondhumanmethod.com/blog/how-screens-effect-sleep"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long before bed should I stop using screens?", "acceptedAnswer": {"@type": "Answer", "text": "The Sleep Foundation recommends an hour or more before bed, which gives your body time to wind down without screen light delaying melatonin."}}, {"@type": "Question", "name": "Does night mode or blue light blocking help?", "acceptedAnswer": {"@type": "Answer", "text": "It may lessen the impact a little, but the stimulation of scrolling still keeps your mind active. Putting the screen away works best."}}, {"@type": "Question", "name": "Is watching TV before bed bad for sleep?", "acceptedAnswer": {"@type": "Answer", "text": "Late-night TV can push your bedtime later and keep your mind stimulated. In my experience, a wind-down routine without screens works better."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.thebeyondhumanmethod.com/"}, {"@type": "ListItem", "position": 2, "name": "Answers", "item": "https://www.thebeyondhumanmethod.com/answers"}, {"@type": "ListItem", "position": 3, "name": "Screens Before Bed", "item": "https://www.thebeyondhumanmethod.com/blog/how-screens-effect-sleep"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TN50F5PK7E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TN50F5PK7E');
+(function(){var K='tbhm_utm',u=null,q=new URLSearchParams(location.search);
+try{u=JSON.parse(localStorage.getItem(K)||'null');}catch(x){}
+if(q.get('utm_source')){u={s:q.get('utm_source'),m:q.get('utm_medium')||'',c:q.get('utm_campaign')||''};}
+else if(!u&&document.referrer&&document.referrer.indexOf(location.hostname)<0){try{u={s:new URL(document.referrer).hostname.replace(/^www\./,''),m:'referral',c:''};}catch(x){}}
+try{if(u)localStorage.setItem(K,JSON.stringify(u));}catch(x){}
+function tag(a){if(!u||a.href.indexOf('utm_source=')>-1)return;try{var l=new URL(a.href);l.searchParams.set('utm_source',u.s);if(u.m)l.searchParams.set('utm_medium',u.m);if(u.c)l.searchParams.set('utm_campaign',u.c);a.href=l.toString();}catch(x){}}
 document.addEventListener('click',function(e){var a=e.target.closest('a[href]');if(!a)return;var h=a.href;
-if(h.indexOf('calendly.com')>-1)gtag('event','begin_checkout',{link_url:h,link_text:a.textContent.trim()});
-else if(h.indexOf('circle.so')>-1)gtag('event','join_community_click',{link_url:h});});</script>
+if(h.indexOf('calendly.com')>-1){tag(a);gtag('event','begin_checkout',{link_url:h,link_text:a.textContent.trim()});}
+else if(h.indexOf('circle.so')>-1){tag(a);gtag('event',h.indexOf('/checkout/')>-1?'add_to_cart':'join_community_click',{link_url:h});}});
+document.addEventListener('submit',function(e){var f=e.target;if(f.action&&f.action.indexOf('list-manage')>-1)gtag('event','generate_lead',{form:'rose_report'});});
+window.addEventListener('message',function(e){if(String(e.origin).indexOf('tally.so')<0)return;var d=e.data;try{if(typeof d==='string')d=JSON.parse(d);}catch(x){return;}
+if(d&&d.event==='Tally.FormSubmitted'){gtag('event','quiz_complete',{form_id:(d.payload&&d.payload.formId)||''});gtag('event','generate_lead',{form:'archetype_quiz'});}});})();</script>
 </head>
 <body>
 <a href="#main" class="fine" style="position:absolute;left:-9999px">Skip to content</a>
