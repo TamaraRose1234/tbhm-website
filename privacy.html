@@ -35,7 +35,8 @@ if(h.indexOf('calendly.com')>-1){tag(a);gtag('event','begin_checkout',{link_url:
 else if(h.indexOf('circle.so')>-1){tag(a);gtag('event',h.indexOf('/checkout/')>-1?'add_to_cart':'join_community_click',{link_url:h});}});
 document.addEventListener('submit',function(e){var f=e.target;if(f.action&&f.action.indexOf('list-manage')>-1)gtag('event','generate_lead',{form:'rose_report'});});
 window.addEventListener('message',function(e){if(String(e.origin).indexOf('tally.so')<0)return;var d=e.data;try{if(typeof d==='string')d=JSON.parse(d);}catch(x){return;}
-if(d&&d.event==='Tally.FormSubmitted'){gtag('event','quiz_complete',{form_id:(d.payload&&d.payload.formId)||''});gtag('event','generate_lead',{form:'archetype_quiz'});}});})();</script>
+if(d&&d.event==='Tally.FormSubmitted'){gtag('event','quiz_complete',{form_id:(d.payload&&d.payload.formId)||''});gtag('event','generate_lead',{form:'archetype_quiz'});}});})();
+if(!tbI){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z11e46blhr");}</script>
 </head>
 <body>
 <a href="#main" class="fine" style="position:absolute;left:-9999px">Skip to content</a>
@@ -102,9 +103,10 @@ if(d&&d.event==='Tally.FormSubmitted'){gtag('event','quiz_complete',{form_id:(d.
 
   <h2>Cookies and analytics</h2>
   <p>We use essential cookies to make the site work and analytics cookies (Google Analytics) to understand which pages are helpful. Analytics data is aggregated and doesn't identify you by name. You can block or delete cookies in your browser settings, and you can opt out of Google Analytics with Google's browser add-on.</p>
+  <p>We also use Microsoft Clarity to see how visitors move through our pages, such as where they scroll and click, so we can make the site easier to use. Clarity hides anything you type and doesn't identify you by name.</p>
 
   <h2>Who we share it with</h2>
-  <p>We share information only with the service providers that help us run the business, under their own privacy commitments: scheduling (Calendly), video (Zoom), community and courses (Circle), email (Mailchimp), payments (Stripe), contracts (DocuSign), forms (Tally) and analytics (Google). We may also disclose information when the law requires it.</p>
+  <p>We share information only with the service providers that help us run the business, under their own privacy commitments: scheduling (Calendly), video (Zoom), community and courses (Circle), email (Mailchimp), payments (Stripe), contracts (DocuSign), forms (Tally) and analytics (Google and Microsoft Clarity). We may also disclose information when the law requires it.</p>
   <p>We use AI tools to transcribe and organize session recordings and notes. They don't train on your data.</p>
 
   <h2>How long we keep it</h2>
