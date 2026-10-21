@@ -186,7 +186,7 @@ section{padding-block:clamp(60px,8vw,110px)}
 .fcols{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px}
 .fbrand{display:flex;flex-direction:column;gap:14px}
 .fbrand img{height:58px;width:auto;margin-left:-6px}
-.fbrand p{font:italic 400 17px/1.45 var(--serif);color:#d9c7d2;max-width:30ch}
+.fbrand p{font:300 16px/1.6 var(--display);letter-spacing:.01em;color:#d9c7d2;max-width:36ch}
 .fcols h4{color:var(--gold);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;margin-bottom:14px}
 .fcols ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
 .fcommunity{margin-top:40px;padding-block:22px;border-block:1px solid rgba(233,219,227,.18);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
