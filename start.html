@@ -76,12 +76,14 @@ if(!tbI){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push
 .c-stage{object-position:50% 20%;transform:scale(1.7);transform-origin:55% 32%}
 .c-seated{object-position:100% 25%;transform:scale(1.15);transform-origin:75% 30%}
 .c-med{transform:scale(1.75);transform-origin:50% 45%}
+.c-rr{object-position:50% 12%}
 @media (max-width:640px){
  .c-stage{transform:scale(1.6);transform-origin:58% 30%}
  .c-seated{object-position:100% 20%;transform:scale(1.5);transform-origin:82% 28%}
  .c-med{object-position:50% 35%;transform:scale(1.6);transform-origin:50% 35%}
  .c-blue{object-position:50% 15%}
  .c-pod{object-position:50% 38%}
+ .c-rr{object-position:50% 15%}
 }
 </style>
 
@@ -120,6 +122,16 @@ if(!tbI){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push
   <p class="sh-msg">Or <a id="sh-msg" href="https://ig.me/m/tamararose.tbhm">message me what's up for you</a>&hellip; I'd love to connect and hear about it.</p>
 
   <h2 style="text-align:center;margin-top:12px">Not ready yet? Start here&hellip;</h2>
+
+  <div class="sh-card" id="sh-rr">
+    <div class="txt">
+      <p class="eyebrow"><span class="free">FREE</span> weekly letter &middot; The Rose Report</p>
+      <h3>Make sense of what's happening in the world, and feel the good news too</h3>
+      <p>Ten minutes a week with the sky, what's really moving in the world, a woman paving the way and a practice to calm your body. This week: Why the whole world feels like it's on a ballot right now.</p>
+      <a class="btn ghost" id="sh-rr-link" href="rose-report/why-every-election-feels-so-intense-right-now">Read this week's issue</a>
+    </div>
+    <div class="pic"><img srcset="img/_w/rose-report__banner-blue-dress-flipped-853.webp 853w" sizes="100vw" class="c-rr" src="img/rose-report/banner-blue-dress-flipped.jpg" alt="Tamara Rose, host of the Rose Report" loading="lazy"></div>
+  </div>
 
   <div class="sh-card">
     <div class="txt">
@@ -182,6 +194,7 @@ if(!tbI){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push
     linkedin:{hi:"So glad you found me on LinkedIn&hellip;",msg:"https://www.linkedin.com/in/tamara-l-rose"},
     youtube:{hi:"Welcome from YouTube&hellip;",msg:"https://ig.me/m/tamararose.tbhm"}
   };
+  try{var rl=document.getElementById('sh-rr-link');if(rl&&s){rl.href=rl.getAttribute('href')+'?utm_source='+encodeURIComponent(s)+'&utm_medium=bio&utm_campaign=rose-report-2';}}catch(e){}
   var p=P[s];if(!p)return;
   var hi=document.getElementById('sh-hi');hi.innerHTML=p.hi;hi.style.display='block';
   document.getElementById('sh-msg').href=p.msg;
