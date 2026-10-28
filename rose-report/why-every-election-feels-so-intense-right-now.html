@@ -48,6 +48,7 @@ if(!tbI){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push
   --bg:#FFF9F8; --paper:#ffffff; --fg:#2a1026; --muted:#6e5868;
   --gold:#c4a65f; --blush:#fce7dc; --rose:#cd8d89; --teal:#047276;
   --shadow:0 10px 24px rgba(68,0,57,.22),0 2px 6px rgba(68,0,57,.12); --note-bg:#e6f2f2; --note-fg:#034e51; --line:#ecdcd6; --head:#440039;
+  --num-bg:#440039; --num-fg:#fff9f8;
   --display:"Jost","Cooper Hewitt","Helvetica Neue",Arial,sans-serif;
   --body:"Jost","Cooper Hewitt","Helvetica Neue",Arial,sans-serif;
   --script:"Cormorant Garamond",Georgia,serif;
@@ -55,11 +56,11 @@ if(!tbI){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#440039; --paper:#440039; --fg:#f6ebe8; --muted:#c3aebb;
   --gold:#d6bb79; --blush:#440039; --rose:#e0a7a3; --teal:#5fb8bb;
-  --shadow:0 10px 26px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.35); --note-bg:#440039; --note-fg:#a9dedd; --line:rgba(255,249,248,.22); --head:#f0c9c4; color-scheme:dark}}
+  --shadow:0 10px 26px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.35); --note-bg:#440039; --note-fg:#a9dedd; --line:rgba(255,249,248,.22); --head:#f0c9c4; --num-bg:#fff9f8; --num-fg:#440039; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#440039; --paper:#440039; --fg:#f6ebe8; --muted:#c3aebb;
   --gold:#d6bb79; --blush:#440039; --rose:#e0a7a3; --teal:#5fb8bb;
-  --shadow:0 10px 26px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.35); --note-bg:#440039; --note-fg:#a9dedd; --line:rgba(255,249,248,.22); --head:#f0c9c4; color-scheme:dark}
+  --shadow:0 10px 26px rgba(0,0,0,.55),0 2px 6px rgba(0,0,0,.35); --note-bg:#440039; --note-fg:#a9dedd; --line:rgba(255,249,248,.22); --head:#f0c9c4; --num-bg:#fff9f8; --num-fg:#440039; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:400;font-size:17px;line-height:1.65;margin:0}
 .wrap{max-width:680px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
@@ -153,7 +154,7 @@ b,strong{font-weight:500}
 .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--fg);text-decoration:none;min-width:0}
 .card img{width:120px;height:120px;object-fit:cover;border-radius:50%;display:block;box-shadow:var(--shadow);margin-bottom:12px}
-.card .num{position:absolute;top:12px;left:14px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:#2a1026;font-weight:500;font-size:14px;display:grid;place-items:center}
+.card .num{position:absolute;top:12px;left:14px;width:28px;height:28px;border-radius:50%;background:var(--num-bg);color:var(--num-fg);font-weight:500;font-size:14px;display:grid;place-items:center}
 .card h3{margin:0 0 6px}
 .card p{margin:0;font-size:16px}
 .card .more{margin-top:10px;font-size:13px;color:var(--teal);text-decoration:underline;text-underline-offset:3px}
@@ -172,7 +173,7 @@ b,strong{font-weight:500}
     <h1 class="theme">Why the whole world feels like it's on a ballot right now</h1>
     <div class="meta"><span>Wednesday, October 28, 2026</span></div>
   </div>
-</div><div class="hero"><img fetchpriority="high" srcset="../img/_w/rose-report__banner-blue-dress-853.webp 853w" sizes="100vw" src="../img/rose-report/banner-blue-dress.jpg" alt="Tamara Rose, host of the Rose Report, smiling in a light blue dress"></div></div>
+</div><div class="hero"><img fetchpriority="high" srcset="../img/_w/rose-report__banner-blue-dress-flipped-853.webp 853w" sizes="100vw" src="../img/rose-report/banner-blue-dress-flipped.jpg" alt="Tamara Rose, host of the Rose Report, smiling in a light blue dress"></div></div>
 
 
 <main class="wrap">
